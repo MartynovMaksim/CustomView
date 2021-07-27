@@ -2,7 +2,6 @@ package com.example.customview
 
 import android.content.Context
 import android.util.AttributeSet
-import android.util.Log
 import android.view.View
 
 class CustomView(context: Context, attrs: AttributeSet) : View(context, attrs) {
@@ -15,18 +14,10 @@ class CustomView(context: Context, attrs: AttributeSet) : View(context, attrs) {
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
-        val heightMode = MeasureSpec.getMode(heightMeasureSpec)
         val heightSize = MeasureSpec.getSize(heightMeasureSpec)
         val widthSize = MeasureSpec.getSize(widthMeasureSpec)
 
-//        val height = (heightSize * multiply).toInt()
-//        val height: Int
-//
-//        if (heightMode == MeasureSpec.EXACTLY) {
-//            height = heightSize
-//        } else height = (heightSize * multiply).toInt()
-
-        val resolvedHeight = resolveSize((heightSize * multiply).toInt(),heightMeasureSpec)
-        setMeasuredDimension(widthSize, resolvedHeight)
+        val height = (heightSize * multiply).toInt()
+        setMeasuredDimension(widthSize, height)
     }
 }
