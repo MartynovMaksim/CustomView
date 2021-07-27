@@ -3,12 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="300dp"
     tools:context=".MainActivity">
 
     <com.example.customview.CustomView
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="match_parent"
+        app:multiply="0.7"
         android:background="@drawable/gradient"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
